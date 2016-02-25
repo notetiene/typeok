@@ -125,12 +125,12 @@ var NotValidEmailAddressError = function(message) {
 NotValidEmailAddressError.prototype = new Error;
 
 /**
- * Error that a value {@linkcode String} is not a valid URL.
+ * Error that a value {@linkcode String} is not in an URL format.
  * @constructor
  * @param {String} message - Message to display.
  * @augments Error
  */
-var NotURLFormatError = function(message) {
+var NotValidURLError = function(message) {
     /**
      * @property {String} name - Name for the type of error.
      * @constant
@@ -146,7 +146,7 @@ var NotURLFormatError = function(message) {
     this.message = message || 'It’s not a valid URL.';
     this.stack = (new Error()).stack;
 };
-NotURLFormatError.prototype = new Error;
+NotValidURLError.prototype = new Error;
 
 
 /*  errors.js ends here */
