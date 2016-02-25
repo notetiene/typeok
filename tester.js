@@ -72,6 +72,7 @@ typeok.isAscii = function(s) {
  * Verify that a {@linkcode String} is an email address.
  * @param {String} s - The String to test.
  * @returns {bool} True if it's a valid email address format, else returns false.
+ * @see NotEmailAddressError
  */
 typeok.isValidEmailFormat = function(s) {
     if(!this.isString) {

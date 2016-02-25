@@ -99,4 +99,29 @@ function NotAsciiStringError(message) {
 }
 NotAsciiStringError.prototype = new Error;
 
+
+/**
+ * Error that a value {@linkcode String} is not a valid email address.
+ * @constructor
+ * @param {String} message - Message to display.
+ * @augments Error
+ */
+var NotEmailAddressError = function(message) {
+    /**
+     * @property {String} name - Name for the type of error.
+     * @constant
+     * @public
+     */
+    this.name = 'NotAsciiStringError';
+
+    /**
+     * @property {String} message - Human-readable description of the error.
+     * @constant
+     * @public
+     */
+    this.message = message || 'It’s not a valid email address.';
+    this.stack = (new Error()).stack;
+};
+NotEmailAddressError.prototype = new Error;
+
 /*  errors.js ends here */
