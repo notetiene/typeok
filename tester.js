@@ -63,3 +63,4 @@ typeok.isAscii = function(s) {
     return true;
 };
 
+/* tester.js ends here */
