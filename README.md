@@ -3,7 +3,7 @@ Simple library to check the type of an object and a corresponding error.
 
 **Note**: The custom errors must be handled by the user. The functions don’t throw errors.
 
-Current functions and their errors:
+### Current functions and their errors
 
 <table>
     <tr>
