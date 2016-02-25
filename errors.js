@@ -75,4 +75,28 @@ function NotArrayStringsError(message) {
 }
 NotArrayStringsError.prototype = new NotArrayError;
 
+/**
+ * Error that a value {@linkcode String} contains other characters than ASCII.
+ * @constructor
+ * @param {String} message - Message to display.
+ * @augments Error
+ */
+function NotAsciiStringError(message) {
+    /**
+     * @property {String} name - Name for the type of error.
+     * @constant
+     * @public
+     */
+    this.name = 'NotAsciiStringError';
+
+    /**
+     * @property {String} message - Human-readable description of the error.
+     * @constant
+     * @public
+     */
+    this.message = message || 'The String has non-ASCII characters.';
+    this.stack = (new Error()).stack;
+}
+NotAsciiStringError.prototype = new Error;
+
 /*  errors.js ends here */
