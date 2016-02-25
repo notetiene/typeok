@@ -81,6 +81,11 @@ typeok.isValidEmailFormat = function(s) {
     return s.match('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}') !== null;
 };
 
+/**
+ * Verify that a {@linkcode String} is a valid URL.
+ * @param {String} s - The String to test.
+ * @returns {bool} True if it's a valid URL format, else returns false.
+ */
 typeok.isValidUrlFormat = function(s) {
     // Taken at http://stackoverflow.com/a/22648406
     return s < 2083 &&
