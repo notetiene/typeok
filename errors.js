@@ -106,13 +106,13 @@ NotAsciiStringError.prototype = new Error;
  * @param {String} message - Message to display.
  * @augments Error
  */
-var NotEmailAddressError = function(message) {
+var NotValidEmailAddressError = function(message) {
     /**
      * @property {String} name - Name for the type of error.
      * @constant
      * @public
      */
-    this.name = 'NotAsciiStringError';
+    this.name = 'NotValidEmailAddressError';
 
     /**
      * @property {String} message - Human-readable description of the error.
@@ -122,7 +122,7 @@ var NotEmailAddressError = function(message) {
     this.message = message || 'It’s not a valid email address.';
     this.stack = (new Error()).stack;
 };
-NotEmailAddressError.prototype = new Error;
+NotValidEmailAddressError.prototype = new Error;
 
 /**
  * Error that a value {@linkcode String} is not a valid URL.
