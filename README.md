@@ -1,5 +1,5 @@
 # typeok
-Simple library to check the type of an object and throw its conresponding error.
+Simple library to check the type of an object and a corresponding error.
 
 Current functions and their errors:
 
