@@ -1,8 +1,7 @@
-/* errors.js --- Custom errors for Yet Another Expand/Collapse List (yacollist)
+/* errors.js --- Custom errors for typeok library
  Commentary:
  Code:
  */
-
 
 /**
  * Error that a value is not of type {@linkcode String}.
