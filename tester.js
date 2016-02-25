@@ -13,6 +13,7 @@ var typeok = typeok || {};
  * Test if the passed argument is a String.
  * @param {Object} s - A variable to test.
  * @returns {bool} True if a String.
+ * @see NotStringError
  */
 typeok.isString = function (s) {
     return (s instanceof String || typeof s === 'string');
@@ -22,6 +23,7 @@ typeok.isString = function (s) {
  * Test if the passed argument is an Array and has values.
  * @param {Object} a - A variable to test.
  * @returns {bool} True if an Array.
+ * @see NotArrayError
  */
 typeok.isArray = function (a) {
     return (a instanceof Array && a.length > 0);
@@ -30,8 +32,10 @@ typeok.isArray = function (a) {
 /**
  * Test if the passed argument is an Array of Strings.
  * @param {Object} a - A variable to test.
- * @see isString
  * @returns {bool} True if an Array of String.
+ * @see isString
+ * @see isArray
+ * @see NotArrayStringsError
  * @todo Test if the String is empty
  */
 typeok.isStringArray = function (a) {
@@ -51,6 +55,7 @@ typeok.isStringArray = function (a) {
  * Test if the passed argument is {@linkcode String} with only ASCII characters.
  * @param {Object} s - A String to test.
  * @returns {bool} True if only ASCII.
+ * @see NotAsciiStringError
  */
 typeok.isAscii = function(s) {
     /* Loop into each characters of the string */
