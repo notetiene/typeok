@@ -46,3 +46,20 @@ typeok.isStringArray = function (a) {
     }
     return false;
 };
+
+/**
+ * Test if the passed argument is {@linkcode String} with only ASCII characters.
+ * @param {Object} s - A String to test.
+ * @returns {bool} True if only ASCII.
+ */
+typeok.isAscii = function(s) {
+    /* Loop into each characters of the string */
+    for(var pos = 0, l = s.length; pos < l; pos++) {
+        /* If it's not a ascii character, abort*/
+        if(s.charCodeAt(pos) > 127) {
+            return false;
+        }
+    }
+    return true;
+};
+
