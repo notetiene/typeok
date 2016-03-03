@@ -101,6 +101,30 @@ NotAsciiStringError.prototype = new Error;
 
 
 /**
+ * Error that a property was not found in an {@linkcode Object}.
+ * @constructor
+ * @param {String} message - Message to display.
+ * @augments Error
+ */
+var NotMemberProperty = function(message) {
+    /**
+     * @property {String} name - Name for the type of error.
+     * @constant
+     * @public
+     */
+    this.name = 'NotPropertyMember';
+
+    /**
+     * @property {String} message - Human-readable description of the error.
+     * @constant
+     * @public
+     */
+    this.message = message || 'The property is not member of the Object.';
+    this.stack = (new Error()).stack;
+};
+NotMemberProperty.prototype = new ReferenceError;
+
+/**
  * Error that a value {@linkcode String} is not a valid email address.
  * @constructor
  * @param {String} message - Message to display.
