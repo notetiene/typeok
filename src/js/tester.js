@@ -82,6 +82,39 @@ typeok.isStringMap = function(m) {
     return false;
 };
 
+
+/**
+ * Test if the passed argument is a {@linkcode Set} and has values.
+ * @param {Object} s - A variable to test.
+ * @returns {bool} True if a Set.
+ * @see NotSetError
+ */
+typeok.isSet = function(s) {
+    return (s instanceof Set && s.size > 0);
+};
+
+/**
+ * Test if the passed argument is a {@linkcode Set} of {@linkcode String}.
+ * @param {Object} s - A variable to test.
+ * @returns {bool} True if a Set of String.
+ * @see isString
+ * @see isSet
+ * @see NotStringSetError
+ * @todo Test if the String is empty
+ */
+typeok.isStringSet = function(s) {
+    if(this.isSet(s)) {
+        s.forEach(function(value) {
+            if(!this.isString(value)) {
+                return false;
+            }
+        });
+        return true;
+    }
+    return false;
+};
+
+/**
  * Test if the passed argument is {@linkcode String} with only ASCII characters.
  * @param {Object} s - A String to test.
  * @returns {bool} True if only ASCII.
