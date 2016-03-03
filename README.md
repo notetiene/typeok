@@ -34,4 +34,25 @@ Simple library to check the type of an object and a corresponding error.
         <td>NotArrayStringsError</td>
         <td>It’s not a valid Array of Strings.</td>
     </tr>
+    <tr>
+        <td>isAscii</td>
+        <td>Does the String argument contains only [ASCII](https://en.wikipedia.org/wiki/ASCII) characters?</td>
+        <td></td>
+        <td>NotAsciiStringError</td>
+        <td>The String has non-ASCII characters.</td>
+    </tr>
+    <tr>
+        <td>isValidEmailFormat</td>
+        <td>Does the String argument is a valid e-mail?</td>
+        <td></td>
+        <td>NotValidEmailAddressError</td>
+        <td>It’s not a valid e-mail address.</td>
+    </tr>
+    <tr>
+        <td>isAscii</td>
+        <td>Does the String argument is an URL.</td>
+        <td></td>
+        <td>NotValidURLError</td>
+        <td>It’s not a valid URL.</td>
+    </tr>
 </table>
