@@ -125,7 +125,7 @@ var NotMemberProperty = function(message) {
 NotMemberProperty.prototype = new ReferenceError;
 
 /**
- * Error that a value {@linkcode String} is not a valid email address.
+ * Error that a value {@linkcode String} is not a valid e-mail address.
  * @constructor
  * @param {String} message - Message to display.
  * @augments Error
@@ -143,7 +143,7 @@ var NotValidEmailAddressError = function(message) {
      * @constant
      * @public
      */
-    this.message = message || 'It’s not a valid email address.';
+    this.message = message || 'It’s not a valid e-mail address.';
     this.stack = (new Error()).stack;
 };
 NotValidEmailAddressError.prototype = new Error;
