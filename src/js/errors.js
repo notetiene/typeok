@@ -57,13 +57,13 @@ NotArrayError.prototype = new TypeError;
  * @param {String} message - Message to display.
  * @augments NotArrayError
  */
-function NotArrayStringsError(message) {
+function NotStringArrayError(message) {
     /**
      * @property {String} name - Name for the type of error.
      * @constant
      * @public
      */
-    this.name = 'NotArrayStringsError';
+    this.name = 'NotStringArrayError';
 
     /**
      * @property {String} message - Human-readable description of the error.
@@ -73,7 +73,7 @@ function NotArrayStringsError(message) {
     this.message = message || 'It’s not a valid Array of Strings.';
     this.stack = (new Error()).stack;
 }
-NotArrayStringsError.prototype = new NotArrayError;
+NotStringArrayError.prototype = new NotArrayError;
 
 /**
  * Error that a value is not of type {@linkcode Map}.

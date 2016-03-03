@@ -24,7 +24,7 @@ Argument is an Array of Strings?
 
 | Error                | Error message                      |
 |----------------------|------------------------------------|
-| NotArrayStringsError | It’s not a valid Array of Strings. |
+| NotStringArrayError | It’s not a valid Array of Strings. |
 
 ### isMap
 Argument is a Map and has values?
