@@ -61,6 +61,27 @@ typeok.isMap = function(m) {
     return (m instanceof Map && m.size > 0);
 };
 
+/**
+ * Test if the passed argument is a {@linkcode Map} of {@linkcode String}.
+ * @param {Object} m - A variable to test.
+ * @returns {bool} True if a Map of String.
+ * @see isString
+ * @see isMap
+ * @see NotStringMapError
+ * @todo Test if the String is empty
+ */
+typeok.isStringMap = function(m) {
+    if(this.isMap(m)) {
+        m.forEach(function(value, key){
+            if(!this.isString(key)) {
+                return false;
+            }
+        });
+        return true;
+    }
+    return false;
+};
+
  * Test if the passed argument is {@linkcode String} with only ASCII characters.
  * @param {Object} s - A String to test.
  * @returns {bool} True if only ASCII.
