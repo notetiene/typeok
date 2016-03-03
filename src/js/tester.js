@@ -52,6 +52,15 @@ typeok.isStringArray = function (a) {
 };
 
 /**
+ * Test if the passed argument is a {@linkcode Map} and has values.
+ * @param {Object} m - A variable to test.
+ * @returns {bool} True if a Map.
+ * @see NotMapError
+ */
+typeok.isMap = function(m) {
+    return (m instanceof Map && m.size > 0);
+};
+
  * Test if the passed argument is {@linkcode String} with only ASCII characters.
  * @param {Object} s - A String to test.
  * @returns {bool} True if only ASCII.
