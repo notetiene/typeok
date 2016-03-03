@@ -28,16 +28,31 @@ Argument is an Array of Strings?
 
 ### isMap
 Argument is a Map and has values?
+
 | Error       | Error message                    |
 |-------------|----------------------------------|
 | NotMapError | It’s not a valid Map.            |
 
 ### isStringMap
 Argument is a Map of Strings?
+
 | Error             | Error message                    |
 |-------------------|----------------------------------|
 | NotStringMapError | It’s not a valid Map of Strings. |
 
+### isSet
+Argument is a Set and has values?
+
+| Error       | Error message         |
+|-------------|-----------------------|
+| NotSetError | It’s not a valid Set. |
+
+### isStringSet
+Argument is a Set of Strings?
+
+| Error             | Error message                    |
+|-------------------|----------------------------------|
+| NotStringSetError | It’s not a valid Set of Strings. |
 
 ### isAscii
 Does the String argument contains only [ASCII](https://en.wikipedia.org/wiki/ASCII/) characters? 
@@ -45,7 +60,6 @@ Does the String argument contains only [ASCII](https://en.wikipedia.org/wiki/ASC
 | Error               | Error message                        |
 |---------------------|--------------------------------------|
 | NotAsciiStringError | The String has non-ASCII characters. |
-
 
 ### isValidEmailFormat
 Does the String argument is a valid e-mail?
