@@ -99,7 +99,6 @@ function NotAsciiStringError(message) {
 }
 NotAsciiStringError.prototype = new Error;
 
-
 /**
  * Error that a property was not found in an {@linkcode Object}.
  * @constructor

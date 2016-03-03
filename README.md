@@ -41,7 +41,7 @@ Does the String argument is a valid e-mail?
 |---------------------------|----------------------------------|
 | NotValidEmailAddressError | It’s not a valid e-mail address. |
 
-### isAscii
+### isValidUrlFormat
 Does the String argument is an URL?
 
 | Error             | Error message         |
