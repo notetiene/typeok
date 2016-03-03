@@ -26,6 +26,19 @@ Argument is an Array of Strings?
 |----------------------|------------------------------------|
 | NotArrayStringsError | It’s not a valid Array of Strings. |
 
+### isMap
+Argument is a Map and has values?
+| Error       | Error message                    |
+|-------------|----------------------------------|
+| NotMapError | It’s not a valid Map.            |
+
+### isStringMap
+Argument is a Map of Strings?
+| Error             | Error message                    |
+|-------------------|----------------------------------|
+| NotStringMapError | It’s not a valid Map of Strings. |
+
+
 ### isAscii
 Does the String argument contains only [ASCII](https://en.wikipedia.org/wiki/ASCII/) characters? 
 
