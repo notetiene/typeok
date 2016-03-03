@@ -76,6 +76,53 @@ function NotArrayStringsError(message) {
 NotArrayStringsError.prototype = new NotArrayError;
 
 /**
+ * Error that a value is not of type {@linkcode Map}.
+ * @constructor
+ * @param {String} message - Message to display.
+ * @augments TypeError
+ */
+function NotMapError(message) {
+    /**
+     * @property {String} name - Name for the type of error.
+     * @constant
+     * @public
+     */
+    this.name = 'NotMapError';
+
+    /**
+     * @property {String} message - Human-readable description of the error.
+     * @constant
+     * @public
+     */
+    this.message = message || 'It’s not a valid Map.';
+    this.stack = (new Error()).stack;
+}
+NotMapError.prototype = new TypeError;
+
+/**
+ * Error that a value is not a {@linkcode Map} of {@linkcode String}.
+ * @constructor
+ * @param {String} message - Message to display.
+ * @augments NotMapError
+ */
+function NotStringMapError(message) {
+    /**
+     * @property {String} name - Name for the type of error.
+     * @constant
+     * @public
+     */
+    this.name = 'NotStringMapError';
+
+    /**
+     * @property {String} message - Human-readable description of the error.
+     * @constant
+     * @public
+     */
+    this.message = message || 'It’s not a valid Map of Strings.';
+    this.stack = (new Error()).stack;
+}
+NotStringMapError.prototype = new NotMapError;
+
  * Error that a value {@linkcode String} contains other characters than ASCII.
  * @constructor
  * @param {String} message - Message to display.
