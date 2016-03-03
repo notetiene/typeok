@@ -160,7 +160,7 @@ var NotValidURLError = function(message) {
      * @constant
      * @public
      */
-    this.name = 'NotAsciiStringError';
+    this.name = 'NotValidURLError';
 
     /**
      * @property {String} message - Human-readable description of the error.
