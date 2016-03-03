@@ -123,6 +123,55 @@ function NotStringMapError(message) {
 }
 NotStringMapError.prototype = new NotMapError;
 
+/**
+ * Error that a value is not of type {@linkcode Set}.
+ * @constructor
+ * @param {String} message - Message to display.
+ * @augments TypeError
+ */
+function NotSetError(message) {
+    /**
+     * @property {String} name - Name for the type of error.
+     * @constant
+     * @public
+     */
+    this.name = 'NotSetError';
+
+    /**
+     * @property {String} message - Human-readable description of the error.
+     * @constant
+     * @public
+     */
+    this.message = message || 'It’s not a valid Set.';
+    this.stack = (new Error()).stack;
+}
+NotSetError.prototype = new TypeError;
+
+/**
+ * Error that a value is not a {@linkcode Set} of {@linkcode String}.
+ * @constructor
+ * @param {String} message - Message to display.
+ * @augments NotSetError
+ */
+function NotStringSetError(message) {
+    /**
+     * @property {String} name - Name for the type of error.
+     * @constant
+     * @public
+     */
+    this.name = 'NotStringSetError';
+
+    /**
+     * @property {String} message - Human-readable description of the error.
+     * @constant
+     * @public
+     */
+    this.message = message || 'It’s not a valid Set of Strings.';
+    this.stack = (new Error()).stack;
+}
+NotStringSetError.prototype = new NotSetError;
+
+/**
  * Error that a value {@linkcode String} contains other characters than ASCII.
  * @constructor
  * @param {String} message - Message to display.
