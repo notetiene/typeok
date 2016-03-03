@@ -36,7 +36,7 @@ Simple library to check the type of an object and a corresponding error.
     </tr>
     <tr>
         <td>isAscii</td>
-        <td>Does the String argument contains only [ASCII](https://en.wikipedia.org/wiki/ASCII) characters?</td>
+        <td>Does the String argument contains only <a href="https://en.wikipedia.org/wiki/ASCII/">ASCII</a> characters?</td>
         <td></td>
         <td>NotAsciiStringError</td>
         <td>The String has non-ASCII characters.</td>
